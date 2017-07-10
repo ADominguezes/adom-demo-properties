@@ -7,13 +7,6 @@
 
     properties: {
       /**
-       * If true, hide the menu in top of page.
-       */
-      hideMenu: {
-        type: Boolean,
-        value: false
-      },
-      /**
        * Component name, is a obligatory property
        */
       componentName: {
@@ -50,16 +43,6 @@
           return {};
         },
       },
-      /**
-       * Array with options for show the tabs in the menu
-       */
-      _optionsMenu: {
-        type: Array,
-        value: function() {
-          return [];
-        },
-        notify: true
-      },
       propertiesSetted: {
         type: Array,
         value: function() {
@@ -85,9 +68,6 @@
       }
       this._propertiesBinded = this.propertiesSetted;
     },
-    _setOptionsMenu: function(menu) {
-      this._optionsMenu = menu;
-    },
 
     _computedContent: function() {
       if (this.optionSelected > this.children.length) {
@@ -101,7 +81,6 @@
       }
       this.$$('#heading').innerHTML = this.children[this.optionSelected].getAttribute('data-heading');
       this.$$('#description').innerHTML = this.children[this.optionSelected].getAttribute('data-description');
-      this._setOptionsMenu(menu);
     },
     _showToast: function(e) {
       this.$$('#toast').text = e.type;
@@ -129,9 +108,6 @@
       snippet = '<'+ this.componentName + ' ' + newProperties + '></'+ this.componentName + '>'
       this.children[this.optionSelected].innerHTML = html;
       this.children[this.optionSelected]._markdown = '```' + snippet + '```';
-    },
-    _reset: function() {
-      this._propertiesBinded = this.propertiesSetted;
     }
 
   });

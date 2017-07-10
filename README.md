@@ -1,12 +1,10 @@
 # \<adom-demo-properties\>
 
-is a component created for to be used in other demo components with properties
-
-this component uses the structure of your demo for create a menu with the differents demos
+Is a component created for to be used in other demo components with properties
 
 ## Structure
 
-In all the separate blocks, it is necessary to apply an id for each block, this id must be `view` followed by a number that starts at 0
+With this component you can see your component demo and change his properties, this show the result of component.
 
 __example__
 
@@ -24,19 +22,6 @@ __example__
 ```html
 <adom-demo-properties default-content-id="demo">
   <demo-snippet id="demo0">
-  </demo-snippet>
-</adom-demo-properties>
-```
-
-It´s possible hide the menu with the property `hideMenu`
-
-__example__
-
-```html
-<adom-demo-properties default-content-id="demo" hide-menu>
-  <demo-snippet id="demo0">
-  </demo-snippet>
-  <demo-snippet id="demo1">
   </demo-snippet>
 </adom-demo-properties>
 ```

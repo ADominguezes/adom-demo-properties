@@ -4,18 +4,7 @@
 :host {
   display: block;
   box-sizing: border-box;
-  --paper-tabs-selection-bar-color: var(--adom-demo-properties-paper-tabs-bar-color, green);
   @apply (--adom-demo-properties); }
-
-paper-tabs {
-  --paper-tabs-color: #000;
-  --paper-tabs-font-weight: normal;
-  --paper-tabs-border-bottom: 1px solid #ededed;
-  --paper-tabs-selection-bar-border-bottom: 1px solid var(--paper-tabs-selection-bar-color); }
-
-paper-tab {
-  --paper-tab-content-unselected-color: #999;
-  --paper-tab-content-unselected-font-weight: lighter; }
 
 .toastContent {
   padding: 0.5em 0 0.5em 0;
